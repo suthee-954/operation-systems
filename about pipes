@@ -1,0 +1,7 @@
+1. Unidirectional Communication:
+A pipe allows one process to write to it, and the other process to read from it.
+The data written to the pipe by one process is consumed by the other process. Once data is read from the pipe, it is no longer available in the pipe’s buffer for future reads.
+
+2. Separate Buffers:
+When you write to the pipe, the data is stored in the pipe’s internal buffer, not in the parent or child’s memory.
+The child process reads from the pipe, retrieves the data, and then it is removed from the pipe’s buffer.
